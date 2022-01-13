@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_crud/widget/add_todo_dialog_widget.dart';
 
 import '../main.dart';
 
@@ -51,7 +52,12 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.circular(50),
         ),
         child: Icon(Icons.add),
-        onPressed: () => {},
+        backgroundColor: Colors.black,
+        onPressed: () => showDialog(
+          context: context,
+          builder: (context) => AddTodoDialogWidget(),
+          barrierDismissible: false,
+        ),
       ),
     );
   }
