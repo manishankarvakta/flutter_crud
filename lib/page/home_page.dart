@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_crud/widget/add_todo_dialog_widget.dart';
+import 'package:flutter_crud/widget/todo_list_widget.dart';
 
 import '../main.dart';
 
@@ -16,9 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final tabs = [
-      Container(
-        child: Center(child: Text("Todos")),
-      ),
+      TodoListWidget(),
       Container(
         child: Center(child: Text("Complete")),
       ),
